@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  background-color: #3453c5d9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container{
+  margin: 20px auto;
+  padding: 20px;
+  width: 75%;
+  height: auto;
+}
+.search-box{
+  width:70%;
+  padding: 0;
+  margin: 50px auto 20px;
+
+}
+
+.search-box .search{
+  width: 85%;
+  height: 27px;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #787373;
+  box-shadow: 1px 2px 3px 2px #00000025;
+  outline: none;
+  color: #726e6e;
+}
+::placeholder{
+  color: #b3b0b0;
+  
+}
+.search-box .search-repo{
+  width: 11%;
+  height: 39px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #787373;
+  background-color: #787373;
+  color: #FFF;
+  box-shadow: 1px 2px 3px 2px #00000025;
+  outline: none;
+}
+.search-box .search-repo:hover{
+  background-color: #585e5a;
+  border-color: #585e5a;
+}
+.repos{
+  width: initial;
+  /* min-height: 400px; */
+  height: auto;
+  margin-top: 20px;
+  padding: 10px 25px 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #787373;
+  box-shadow: 1px 2px 3px 2px #00000025;
+}
+.repos .repo{
+  width: inherit;
+  height: auto;
+  display: flow-root;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #cdc3c3;
+  box-shadow: 1px 1px 5px 1px #00000045;
+
+}
+.repo table{
+  width:100%;
+}
+.repo table tr>td{
+  width:50%;
+  border: none;
+  vertical-align: top;
+}
+.repo table tr>td.repo-update-date{
+  text-align: right;
+}
+.repo span.repo-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #7784b5;
+  text-decoration: underline;
+}
+.repo span.repo-author {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7e7a7a;
+}
+.repo span.repo-desc {
+  font-size: 12px;
+  font-weight: 500;
+}
+.repo span.repo-lang {
+  font-size: 14px;
+  font-weight: 500;
+  color: #325a8d;
+}
+.repo span.repo-last-update {
+  font-size: 12px;
+  font-weight: 500;
+  color: #383636;
+}
+.repo span.repo-cont {
+  font-size: 13px;
+  font-weight: 600;
+}
+.repo span.repo-cont-un {
+  font-size: 13px;
+  font-weight: 600;
+  color: #376293;
+}
+.repo span.repo-activity-count {
+  font-size: 13px;
+  font-weight: 700;
+}
+.repo span.repo-activity {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7a7474;
+}
