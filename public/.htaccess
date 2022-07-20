@@ -1,0 +1,63 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect public to root
+    RewriteCond %{REQUEST_URI} public/$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST} [R,L]
+    
+    RewriteCond %{REQUEST_URI} public/reset/password$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/reset/password [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/forgotPassword$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/forgotPassword [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/recoverPassword/$1
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/recoverPassword/$1 [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/resetPassword$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/resetPassword [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/saveRegistration$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/saveRegistration [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/register/getFmnBde$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/register/getFmnBde [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/register/getEmail$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/register/getEmail [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/register/getJcoOrInfo$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/register/getJcoOrInfo [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/register/getDistrictWiseThana$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/register/getDistrictWiseThana [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/register/create$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/register/create [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/checkStatus$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/checkStatus [R,L]
+	
+	RewriteCond %{REQUEST_URI} public/registration$
+    RewriteRule ^(.*)$ http://%{HTTP_HOST}/registration [R,L]	
+	
+	
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
